@@ -1,0 +1,20 @@
+{   
+    "build": {
+        "dockerfile": "Dockerfile.zola"
+    },
+    "name": "Zola",
+    "forwardPorts": [8000],
+    "portsAttributes": {
+        "8000": {
+            "label": "Zola Server",
+            "onAutoForward": "openBrowserOnce"
+        },
+        "1024": {
+            "label": "Zola Live Reload",
+            "onAutoForward": "silent"
+        }
+    },
+    "postStartCommand": {
+        "zola": "python bin/build_metadata.py && python bin/build_matches.py && python bin/build_roster.py && /usr/local/bin/zola serve -i 0.0.0.0 -p 8000"
+    }
+}

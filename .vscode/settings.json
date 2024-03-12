@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.md": "jinja-md",
+        "*.html": "jinja-html"
+    }
+}

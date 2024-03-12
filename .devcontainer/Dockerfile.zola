@@ -1,0 +1,9 @@
+FROM jauderho/zola
+
+USER root
+RUN /sbin/apk add git openssh-client python3 py3-yaml
+RUN /usr/sbin/adduser -D contributor
+
+USER contributor
+ENTRYPOINT ["/usr/local/bin/zola"]
+CMD ["--help"]

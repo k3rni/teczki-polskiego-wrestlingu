@@ -1,0 +1,1 @@
+html.dark .career-mpy div:nth-child(odd){background:var(--dimGrey)}html.light .career-mpy div:nth-child(odd){background:var(--grey)}.career-mpy{display:flex;flex-direction:column}.career-mpy div{display:flex}.career-mpy div span{padding-right:1em}.career-mpy div.header :nth-child(2){flex-grow:1}
